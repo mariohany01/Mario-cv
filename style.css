@@ -1,420 +1,162 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+/***********************************************/
+/************GLOBAL SETTINGS********************/
+/***********************************************/
+
 
 /* Global Reset to remove default browser styles */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    font-family: 'Poppins', sans-serif; /* Use the Poppins font */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+border: none;
+outline: none;
+font-family: "Poppins", sans-serif; /* Use the Poppins font */
 }
 
 /* Set base font size for easy rem unit calculation (1rem = 10px) */
-html{
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+html {
+font-size: 62.5%;
+scroll-behavior: smooth;
 }
 
 /* Set global body styles */
-body{
-    width: 100%; /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    background-color: black; /* Set background color */
-    color: white; /* Text color */
+body {
+width: 100%; /* Full width of the viewport */
+height: 100vh; /* Full height of the viewport */
+overflow-x: hidden; /* Prevent horizontal scrolling */
+background-color: black; /* Set background color */
+color: white; /* Text color */
 }
 
 
 
-
+/***********************************************/
+/*************HEADER SETTINGS*******************/
+/***********************************************/
 
 /* Header styling */
-header{
-    margin-top: 20px;
-    position: fixed; /* Stick header to the top */
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width header */
-    padding: 1rem 9%; /* Padding inside the header */
-    background-color: transparent; /* Transparent background */
-    filter: drop-shadow(10px); /* Drop shadow effect */
-    display: flex; /* Flexbox for horizontal layout */
-    justify-content: space-between; /* Space between logo and nav links */
-    align-items: center; /* Align items vertically */
-    z-index: 100; /* Ensure header stays on top */
+header {
+margin-top: 20px;
+position: fixed; /* Stick header to the top */
+top: 0;
+left: 0;
+width: 100%; /* Full width header */
+padding: 1rem 9%; /* Padding inside the header */
+background-color: transparent; /* Transparent background */
+filter: drop-shadow(10px); /* Drop shadow effect */
+display: flex; /* Flexbox for horizontal layout */
+justify-content: space-between; /* Space between logo and nav links */
+align-items: center; /* Align items vertically */
+z-index: 100; /* Ensure header stays on top */
 }
 
 /* Logo styling */
-.logo{
-    font-size: 3rem; /* Font size of logo */
-    color: #b74b4b; /* Custom red color */
-    font-weight: 800; /* Bold text */
-    cursor: pointer; /* Show pointer on hover */
-    transition: 0.5s ease; /* Smooth transition on hover */
+header  .logo {
+font-size: 3rem; /* Font size of logo */
+color: #b74b4b; /* Custom red color */
+font-weight: 800; /* Bold text */
+cursor: pointer; /* Show pointer on hover */
+transition: 0.5s ease; /* Smooth transition on hover */
 }
 
 /* Logo hover effect */
-.logo:hover{
-    transform: scale(1.1); /* Slightly enlarge logo on hover */
+header  .logo:hover {
+transform: scale(1.1); /* Slightly enlarge logo on hover */
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/***********************************************/
+/*************SIDE NAV BAR**********************/
+/***********************************************/
 
 
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1500; /* Increased z-index */
-    top: 0; /* Stay at the top */
-    right: 0; /* Align to the right */
-    background-color: #111; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+height: 100%; /* 100% Full-height */
+width: 0; /* 0 width - change this with JavaScript */
+position: fixed; /* Stay in place */
+z-index: 1500; /* Increased z-index */
+top: 0; /* Stay at the top */
+right: 0; /* Align to the right */
+background-color: #111; /* Black */
+overflow-x: hidden; /* Disable horizontal scroll */
+padding-top: 60px; /* Place content 60px from the top */
+transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-/* The navigation menu links */
-
+/*EL KALAM ELE FEHA*/
 .sidenav a {
-    transition: 1s;
-    padding: 50px 8px 8px 32px; /* Adjust padding if necessary */
-    text-decoration: none;
-    font-size: 50px;
-    color: #818181;
-    display: block;
+transition: 1s;
+padding: 50px 8px 8px 32px; /* Adjust padding if necessary */
+text-decoration: none;
+font-size: 50px;
+color: #818181;
+display: block;
 }
-
-
 .sidenav a:nth-of-type(1) {
-    /* Your styles here */
-    padding: 150px 8px 8px 32px;    
+padding: 100px 8px 8px 32px;
+}
+.sidenav .nav-options a:hover{
+/*text-decoration: underline;*/
+transition: 0.7s;
+color: #b74b4b;
 }
 
-
-.sidenav .nav-options a:nth-of-type(1):hover,
-.sidenav .nav-options a:nth-of-type(2):hover,
-.sidenav .nav-options a:nth-of-type(3):hover,
-.sidenav .nav-options a:nth-of-type(4):hover{
-    /* Your styles here */
-    text-decoration: underline;
-    transition: 0.7s;
-    color:#b74b4b;
-}
-
-
-/* Position and style the close button (top right corner) */
+/*CLOSE BUTTON  x */
 .sidenav .closebtn {
-    background-color: #111;
-    color: #b74b4b;
-    position: absolute;
-    top: 15px;
-    left: 0px; /* Change to left since it's on the right now */
-    font-size: 36px;
-    margin-left: 50px;
-    transition: 0.5s;
-
+background-color: #111;
+color: #b74b4b;
+position: absolute;
+top: 15px;
+left: 0px; /* Change to left since it's on the right now */
+font-size: 36px;
+margin-left: 50px;
+transition: 0.5s;
 }
-.sidenav .closebtn:hover{
-    position: absolute;
-    top: 5px;
-    color: #b74b4b;
-    transition: 0.5s;
-    font-size: 50px;
-}
-
-
-.sidenav .social-icons{
-    transition: 0.5s;
-    position: absolute  ;
-    left :400px ;
-    display: inline-flex;
-
-    
-}
-.sidenav .social-icons .a{
-    display: inline-flex;
-    justify-content: center; /* Center icons */
-    align-items: center; /* Center icons vertically */
-    width: 4rem;
-    height: 4rem;
-    background-color: transparent; /* Transparent background */
-}
-.sidenav .social-icons a:hover{
-    color: #b74b4b;
-    transition: 0.5s;
-    font-size: 50px;
+.sidenav .closebtn:hover {
+position: absolute;
+top: 5px;
+color: #b74b4b;
+transition: 0.5s;
+font-size: 50px;
 }
 
-.sidenav .social-icons a:nth-of-type(1)
-{
-    position: relative;
-    bottom: 100px;
+/* SOCIAL ICONS*/
+.sidenav .social-icons {
+transition: 0.5s;
+position: absolute;
+left: 400px;
+display: inline-flex;
+}
+.sidenav .social-icons .a {
+display: inline-flex;
+justify-content: center; /* Center icons */
+align-items: center; /* Center icons vertically */
+width: 4rem;
+height: 4rem;
+background-color: transparent; /* Transparent background */
+}
+.sidenav .social-icons a:hover {
+color: #b74b4b;
+transition: 0.5s;
+font-size: 50px;
+}
+.sidenav .social-icons a:nth-of-type(1) {
+position: relative;
+bottom: 100px;
 }
 
 
-/* Style page content - use this if you want to push the page content to the left when you open the side navigation */
-#main {
-    transition: margin-right .5s; /* Change margin-left to margin-right */
-    padding: 20px;
-}
-
+/*OPEN MENU*/
 .openNav {
     position: fixed; /* Fix the button position */
     top: 20px; /* Distance from the top */
-    right: 20px; /* Distance from the right */
-    padding: 1rem 2.8rem; /* Padding inside button */
-    background-color: black; /* Button background */
-    border-radius: 4rem; /* Rounded button */
-    font-size: 1.6rem; /* Button text size */
-    color: #b74b4b; /* Button text color */
-    letter-spacing: 0.3rem; /* Spacing between letters */
-    font-weight: 600; /* Button text weight */
-    border: 2px solid #b74b4b; /* Border around button */
-    transition: opacity 0.5s ease, visibility 0.5s ease; /* Smooth fade effect */
-    cursor: pointer; /* Pointer on hover */
-    z-index: 10000; /* Ensure the button is above other elements */
-    opacity: 0; /* Initially hidden 
-    visibility: hidden; /* Prevent interaction when invisible */
-}
-
-.openNav.show {
-    opacity: 1; /* Fully visible */
-    visibility: visible; /* Allow interaction */
-}
-
-.openNav:hover {
-    background-color: #b74b4b;
-    box-shadow: 0px 15px 20px #461c1c;
-    color: #fff;
-    transform: translateY(-7px);
-}
-
-
-
-
-
-
-
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav { padding-top: 15px; }
-    .sidenav a { font-size: 18px; }
-}
-
-
-
-
-
-
-.home .home-nav{
-    margin-top: 20px;
-    padding: 1rem 9%; /* Padding inside the header */
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 300;
-}
-/* Navigation link  s */
-nav a{
-    font-size: 1.8rem; /* Font size */
-    color: white; /* Text color */
-    margin-left: 4rem; /* Spacing between links */
-    font-weight: 500; /* Medium font weight */
-    transition: 0.3s ease; /* Smooth transition on hover */
-    border-bottom: 3px solid transparent; /* Border for hover effect */
-}
-
-/* Active or hover effect on nav links */
-nav a:hover,
-nav a.active{
-    color: #b74b4b; /* Red color on hover or when active */
-    border-bottom: 3px solid #b74b4b; /* Underline on hover or active */
-}
-
-/* Media query for smaller screens */
-@media(max-width:995px){
-    /* Responsive menu styles */
-    nav{
-        position: absolute; /* Absolute position on smaller screens */
-        display: none; /* Hide initially */
-        top: 0;
-        right: 0;
-        width: 40%; /* Set width of responsive menu */
-        border-left: 3px solid #b74b4b; /* Left border */
-        border-bottom: 3px solid #b74b4b; /* Bottom border */
-        border-bottom-left-radius: 2rem; /* Rounded bottom-left corner */
-        padding: 1rem solid; /* Padding inside menu */
-        background-color: #161616; /* Dark background */
-        border-top: 0.1rem solid rgba(0,0,0,0.1); /* Light border on top */
-    }
-
-    nav.active{
-        display: block; /* Show menu when active */
-    }
-
-    nav a{
-        display: block; /* Stack links vertically */
-        font-size: 2rem;
-        margin: 3rem 0; /* Spacing between links */
-    }
-
-    nav a:hover,
-    nav a.active{
-        padding: 1rem;
-        border-radius: 0.5rem; /* Rounded corners */
-        border-bottom: 0.5rem solid #b74b4b; /* Underline with more thickness */
-    }
-}
-
-/* Generic section styles */
-section{
-    min-height: 100vh; /* Section takes up full viewport height */
-    padding: 5rem 9% 5rem; /* Padding for content */
-}
-
-/* Home section styles */
-.home{
-    display: flex; /* Flexbox layout */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    gap: 8rem; /* Spacing between elements */
-    background-color: black; /* Background color */
-}
-
-/* Image container styles in home section */
-.home-img{
-    position: absolute;
-    left: 35%;
-    bottom: 0%;
-    border-radius: 50%; /* Make image circular */
-}
-
-/* Image styles in home section */
-.home-img img{
-    position: relative;
-    width: 32vw; /* Set width relative to viewport */
-    border-radius: 50%; /* Circular image */
-    box-shadow: 0 0 25px solid #b74b4b; /* Red shadow */
-    cursor: pointer; /* Pointer on hover */
-    transition: 0.2s linear;  /*Smooth hover transition */
-    z-index: 1;
-}
-/* Hover effect for image */
-.home-img img:hover{
-    font-size: 1.8rem;
-    font-weight: 500;
-}
-
-.home .home-content{
-position: absolute;
-bottom: 45%;
-left: 5%;
-}
-
-/* Home content styles (text) */
-.home .home-content h1{
-    font-size: 6rem; /* Large title */
-    font-weight: 10; /* Bold title */
-    line-height: 1.3; /* Line height */
-    z-index: 1;
-}
-
-
-/* Keyframe for moving text from left to right */
-@keyframes moveText {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
-
-
-.home .home-name{
-    white-space: nowrap;
-    overflow-wrap: break-word;
-    position: absolute;
-    bottom: 15%;
-    left: 0;
-    z-index: 100 ;
-    animation: moveText 300s linear infinite;
-    animation-direction: normal;
-    animation-play-state: running; /* Keep the animation running by default */
-}
-
-
-
-.home .home-name h1{
-
-    font-size: 25rem; /* Large title */
-    font-weight: 10; /* Bold title */
-    line-height: 1.3; /* Line height */
-    z-index: 1;
-    
-}
-
-.home .social-icons{
-    position: absolute;
-    bottom: 12%;
-    left: 5%;
-    z-index: 1000;
-}
-/* Social icons styling */
-.home .social-icons a{
-    display: inline-flex; /* Align icons inline */
-    justify-content: center; /* Center icons */
-    align-items: center; /* Center icons vertically */
-    width: 4rem;
-    height: 4rem;
-    background-color: transparent; /* Transparent background */
-    border: 0.2rem solid #b74b4b; /* Border around icons */
-    font-size: 2rem; /* Icon size */
-    border-radius: 50%; /* Circular icons */
-    margin: 3rem 1.5rem 3rem 0; /* Spacing around icons */
-    transition: 0.3s ease; /* Smooth hover transition */
-    color: #b74b4b; /* Icon color */
-}
-
-/* Hover effect for social icons */
-.home .social-icons a:hover{
-    color: black;
-    transform: scale(1.3) translateY(-5px); /* Enlarge and move up slightly */
-    background-color: #b74b4b; /* Background changes to red */
-    box-shadow: 0  0 25px #b74b4b; /* Shadow around icon */
-}
-
-.home .hire-btn{
-    position: absolute;
-    bottom: 7%;
-    left :5%;
-    z-index: 1000;
-}
-/* Button styles */
-.home .hire-btn .btn{
-    display: inline-block; /* Button inline */
+    right: 40px; /* Distance from the right */
     padding: 1rem 2.8rem; /* Padding inside button */
     background-color: black; /* Button background */
     border-radius: 4rem; /* Rounded button */
@@ -425,112 +167,472 @@ left: 5%;
     border: 2px solid #b74b4b; /* Border around button */
     transition: 0.3s ease; /* Smooth hover effect */
     cursor: pointer; /* Pointer on hover */
+    z-index: 10000; /* Ensure the button is above other elements */
+    opacity: 0; /* Initially hidden 
+    visibility: hidden; /* Prevent interaction when invisible */
+    display: inline-block; /* Button inline */
 }
-
-/* Button hover effect */
-.home .hire-btn .btn:hover{
+.openNav.show {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Allow interaction */
+}
+.openNav:hover {
     transform: scale3d(1.03); /* Slightly enlarge button */
     background-color: #b74b4b; /* Background changes to red */
     color: black; /* Text changes to black */
     box-shadow: 0 0 25px #b74b4b; /* Shadow around button */
 }
 
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 
-
-
-
-
-/* Styles for the new personal-information section, inheriting the same styles as home */
-.personal-information{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8rem;
-    background-color: black;
+@media screen and (max-width: 768px) {
+/* Adjust sidenav width for smaller screens */
+.sidenav a {
+    padding: 15px 8px; /* Reduce padding for smaller screens */
+    font-size: 30px;
+    margin: 0 auto; /* Center the element horizontally */
+    width: 0%; /* Adjust this with JavaScript */
+    padding-top: 20px; /* Reduce padding for mobile */
+    transition: 1s; /* Faster transition on mobile */
+    display: flex; /* Use flexbox to align content */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center the text inside the links */
+  }
+  
+  .sidenav a:nth-of-type(1) {
+    padding: 15px 8px; /* Match the padding of the other options */
+    font-size: 30px; /* Reduce font size */
+  }
+  
+  .sidenav a:nth-of-type(2) {
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
-/* personal-information content styles, similar to home content */
-.personal-information-content h1{
-    font-size: 6rem;
-    font-weight: 700;
-    line-height: 1.3;
-}
+  .sidenav .nav-options a:hover {
+    /*text-decoration: underline;*/
+    transition: 0.7s;
+    color: #b74b4b;
+  }
+      
+
+    /* Close button styling for mobile */
+    .sidenav .closebtn {
+        font-size: 30px; /* Smaller close button */
+        top: 10px; /* Adjust position for mobile */
+        margin-left: 20px; /* Adjust margin for smaller screens */
+    }
+
+    /* Adjust social icons for mobile */
+    .sidenav .social-icons {
+        display: none;
+    }
 
 
-
-
-/* Styles for the new education section, inheriting the same styles as home */
-.education{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8rem;
-    background-color: black;
-}
-
-/* education content styles, similar to home content */
-.education-content h1{
-    font-size: 6rem;
-    font-weight: 700;
-    line-height: 1.3;
-}
-
-
-
-
-
-
-
-
-/* Keyframe for cursor blinking effect */
-@keyframes cursor{
-    to{
-        border-left: 3px solid #b74b4b;
+    /* Style the open menu button for mobile */
+    .openNav {
+        right: 20px; /* Adjust right margin for mobile */
+        padding: 0.8rem 2rem; /* Smaller button size */
+        font-size: 1.2rem; /* Reduce text size */
+        border-radius: 3rem; /* Slightly smaller radius */
+    }
+    .openNav:hover {
+        transform: scale(1.05); /* Slightly smaller scale effect */
+        box-shadow: 0 0 15px #b74b4b; /* Smaller shadow */
     }
 }
 
-/* Keyframe for rotating through different job roles */
-@keyframes words{
-    0%, 20%{
-        content: "Mechatonics Engineer";
-    }
-    21%, 40%{
-        content: "Electrical Engineer";
-    }
-    41%, 60%{
-        content: "Computer Engineer";
-    }
-    61%, 80%{
-        content: "Mechanical Engineer";
-    }
-    81%, 100%{
-        content: "Pianist";
-    }
+
+
+
+/*******************************************************/
+/*********** Generic section styles ********************/
+/*******************************************************/
+
+section {
+    min-height: 100vh; /* Section takes up full viewport height */
+    padding: 5rem 9% 5rem; /* Padding for content */
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 1000px){
-    .home{
-        gap: 4rem; /* Reduce gap between items */
-    }
-}
 
-@media(max-width:995px){
-    .home{
+
+/*******************************************************/
+/*******************HOME********************************/
+/*******************************************************/
+
+/*NAvigation bar ele doo2 fel home page*/
+
+@media (max-width: 768px) {
+    .home {
         flex-direction: column; /* Stack items vertically */
         margin: 5rem 4rem; /* Reduce side margins */
     }
+}
 
-    .home .home-content h3{
-        font-size: 2.5rem; /* Reduce subheading size */
+.home {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    gap: 8rem; /* Spacing between elements */
+    background-color: black; /* Background color */
+}
+
+
+/*********************Home nav bar**********************/
+
+.home .home-nav {
+margin-top: 20px;
+padding: 1rem 9%; /* Padding inside the header */
+position: absolute;
+top: 0;
+right: 0;
+z-index: 300;
+}
+/* Navigation link*/
+.home .home-nav nav a {
+font-size: 1.8rem; /* Font size */
+color: white; /* Text color */
+margin-left: 4rem; /* Spacing between links */
+font-weight: 500; /* Medium font weight */
+transition: 0.3s ease; /* Smooth transition on hover */
+border-bottom: 3px solid transparent; /* Border for hover effect */
+}
+/* Active or hover effect on nav links */
+.home .home-nav nav a:hover,
+.home .home-nav nav a.active {
+color: #b74b4b; /* Red color on hover or when active */
+border-bottom: 3px solid #b74b4b; /* Underline on hover or active */
+}
+/* Media query for smaller screens */
+@media (max-width: 995px) {
+/* Responsive menu styles */
+nav {
+    position: absolute; /* Absolute position on smaller screens */
+    display: none; /* Hide initially */
+    top: 0;
+    right: 0;
+    width: 40%; /* Set width of responsive menu */
+    border-left: 3px solid #b74b4b; /* Left border */
+    border-bottom: 3px solid #b74b4b; /* Bottom border */
+    border-bottom-left-radius: 2rem; /* Rounded bottom-left corner */
+    padding: 1rem solid; /* Padding inside menu */
+    background-color: #161616; /* Dark background */
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1); /* Light border on top */
+}
+
+nav.active {
+    display: block; /* Show menu when active */
+}
+
+nav a {
+    display: block; /* Stack links vertically */
+    font-size: 2rem;
+    margin: 3rem 0; /* Spacing between links */
+}
+
+nav a:hover,
+nav a.active {
+    padding: 1rem;
+    border-radius: 0.5rem; /* Rounded corners */
+    border-bottom: 0.5rem solid #b74b4b; /* Underline with more thickness */
+}
+}
+
+
+/*********************Home IMG**********************/
+
+.home-img {
+position: absolute;
+left: 35%;
+bottom: 0%;
+border-radius: 70%; /* Make image circular */
+}
+/* Image styles in home section */
+.home-img img {
+position: relative;
+width: 32vw; /* Set width relative to viewport */
+border-radius: 50%; /* Circular image */
+box-shadow: 0 0 25px solid #b74b4b; /* Red shadow */
+cursor: pointer; /* Pointer on hover */
+transition: 0.2s linear; /*Smooth hover transition */
+z-index: 1;
+}
+/* Hover effect for image */
+.home-img img:hover {
+font-size: 1.8rem;
+font-weight: 500;
+}
+
+/* Mobile styles (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+.home-img {
+    left: 0%; /* Adjust left position for mobile */
+    top: 10%; /* Adjust top position for mobile */
     }
-
-    .home-content h1{
-        font-size: 5rem; /* Reduce title size */
-    }
-
-    .home-img img{
-        width: 70vw; /* Make image larger on smaller screens */
-        margin-top: 4rem; /* Add margin on top of image */
+    
+.home-img img {
+    left: 15%;
+    width: 65%; /* Reduce width for mobile */
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0 0 15px solid #b74b4b; /* Smaller red shadow for mobile */
+    z-index: 1;
     }
 }
+
+
+
+/*********************Home kelmet hello*********************/
+.home .home-content {
+position: absolute;
+bottom: 45%;
+left: 5%;
+}
+/* Home content styles (text) */
+.home .home-content h1 {
+font-size: 6rem; /* Large title */
+font-weight: 10; /* Bold title */
+line-height: 1.3; /* Line height */
+z-index: 1;
+}
+
+/* Mobile styles (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    .home .home-content {
+        bottom: 40%;
+        left : 28%
+    }
+    
+    .home .home-content h1{
+      z-index: 100;
+    }
+  }
+
+
+/*********************Home Its me mario*********************/
+/* Keyframe for moving text from left to right */
+@keyframes moveText {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+    }
+
+.home .home-name {
+white-space: nowrap;
+overflow-wrap: break-word;
+position: absolute;
+bottom: 18%;
+left: 0;
+z-index: 100;
+animation: moveText 300s linear infinite;
+animation-direction: normal;
+animation-play-state: running; /* Keep the animation running by default */
+}
+
+.home .home-name h1 {
+font-size: 25rem; /* Large title */
+font-weight: 10; /* Bold title */
+line-height: 1.3; /* Line height */
+z-index: 1;
+}
+/* Mobile styles (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    .home .home-name {
+      bottom: 30%; /* Adjust the bottom position for mobile */
+    }
+    
+    .home .home-name h1 {
+      font-size: 8rem; /* Smaller font size for mobile */
+      font-weight: 8; /* Adjust font weight for mobile */
+      line-height: 1.2; /* Adjust line height for mobile */
+    }
+}
+
+
+
+/*********************Home Social Icons*********************/
+.home .social-icons {
+position: absolute;
+bottom: 12%;
+left: 5%;
+z-index: 1000;
+}
+/* Social icons styling */
+.home .social-icons a {
+display: inline-flex; /* Align icons inline */
+justify-content: center; /* Center icons */
+align-items: center; /* Center icons vertically */
+width: 4rem;
+height: 4rem;
+background-color: transparent; /* Transparent background */
+border: 0.2rem solid #b74b4b; /* Border around icons */
+font-size: 2rem; /* Icon size */
+border-radius: 50%; /* Circular icons */
+margin: 3rem 1.5rem 3rem 0; /* Spacing around icons */
+transition: 0.3s ease; /* Smooth hover transition */
+color: #b74b4b; /* Icon color */
+}
+/* Hover effect for social icons */
+.home .social-icons a:hover {
+color: black;
+transform: scale(1.3) translateY(-5px); /* Enlarge and move up slightly */
+background-color: #b74b4b; /* Background changes to red */
+box-shadow: 0 0 25px #b74b4b; /* Shadow around icon */
+}
+@media only screen and (max-width: 768px) {
+    .home .social-icons {
+        left: 20%;
+        bottom: 10%;
+        z-index: 1000;
+        }  
+}
+
+/*********************Home Hire Btn*********************/
+.home .hire-btn {
+position: absolute;
+bottom: 7%;
+left: 5%;
+z-index: 1000;
+}
+/* Button styles */
+.home .hire-btn .btn {
+display: inline-block; /* Button inline */
+padding: 1rem 2.8rem; /* Padding inside button */
+background-color: black; /* Button background */
+border-radius: 4rem; /* Rounded button */
+font-size: 1.6rem; /* Button text size */
+color: #b74b4b; /* Button text color */
+letter-spacing: 0.3rem; /* Spacing between letters */
+font-weight: 600; /* Button text weight */
+border: 2px solid #b74b4b; /* Border around button */
+transition: 0.3s ease; /* Smooth hover effect */
+cursor: pointer; /* Pointer on hover */
+}
+/* Button hover effect */
+.home .hire-btn .btn:hover {
+    transform: scale3d(1.03); /* Slightly enlarge button */
+    background-color: #b74b4b; /* Background changes to red */
+    color: black; /* Text changes to black */
+    box-shadow: 0 0 25px #b74b4b; /* Shadow around button */
+}
+
+@media only screen and (max-width: 768px) {
+    .home .hire-btn {
+        position: absolute;
+        left: 28%;
+        bottom: 5%;
+        z-index: 1000;
+        }  
+}
+
+
+/*******************************************************/
+/*****************Personal Info*************************/
+/*******************************************************/
+.personal-information {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 8rem;
+background-color: black;
+}
+/* personal-information content styles, similar to home content */
+.personal-information-content h1 {
+font-size: 6rem;
+font-weight: 700;
+line-height: 1.3;
+}
+
+
+
+/*******************************************************/
+/*****************Education*****************************/
+/*******************************************************/
+
+/* Styles for the new education section, inheriting the same styles as home */
+.education {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 8rem;
+background-color: black;
+}
+
+/* education content styles, similar to home content */
+.education-content h1 {
+font-size: 6rem;
+font-weight: 700;
+line-height: 1.3;
+}
+
+
+/*******************************************************/
+/*****************experience*****************************/
+/*******************************************************/
+
+/* Styles for the new experience section, inheriting the same styles as home */
+.experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+    }
+    
+    /* experience content styles, similar to home content */
+    .experience-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    }
+    
+
+
+/*******************************************************/
+/*****************contact*****************************/
+/*******************************************************/
+
+/* Styles for the new contact section, inheriting the same styles as home */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+    }
+    
+    /* contact content styles, similar to home content */
+    .contact-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    }
+    
+
+
+/*******************************************************/
+/*****************Keyframes*****************************/
+/*******************************************************/
+
+/* Keyframe for cursor blinking effect */
+@keyframes cursor {
+to {
+    border-left: 3px solid #b74b4b;
+}
+}
+
+
+/*******************************************************/
+/************************Media**************************/
+/*******************************************************/
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+.home {
+    gap: 4rem; /* Reduce gap between items */
+}
+}
+
